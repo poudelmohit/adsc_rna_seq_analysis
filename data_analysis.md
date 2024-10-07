@@ -38,4 +38,7 @@ echo "SRR28352487" >> srr_ids_list.txt
 
 cat srr_ids_list.txt
 
-## 
+## downloading FASTQ files using the SRR ids:
+cd data/raw_reads
+cat srr_ids_list.txt | xargs -n 1 ../../tools/sratoolkit.*/bin/fastq-dump --split-files
+
